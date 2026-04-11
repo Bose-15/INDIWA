@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #007cc1;
+  --color-brand-red: #cc0000;
+  --color-brand-green: #04b504;
+  --color-brand-orange: #F15A24;
+  --color-brand-dark: #231F20;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-script: "Caveat", cursive;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  @apply bg-white text-gray-800 m-0 overflow-x-hidden;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+  font-display: swap;
+}
+
+/* Performance Optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  will-change: transform, opacity;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+/* Senior UI Utilities */
+.glass {
+  @apply backdrop-blur-xl bg-white/70 border border-white/40 shadow-xl;
+}
+
+.glass-dark {
+  @apply backdrop-blur-xl bg-gray-900/80 border border-white/10 shadow-2xl;
+}
+
+.mesh-gradient {
+  background: radial-gradient(at 0% 0%, rgba(0, 87, 184, 0.05) 0px, transparent 50%),
+              radial-gradient(at 100% 0%, rgba(241, 90, 36, 0.05) 0px, transparent 50%);
+}
+
+.shadow-glow {
+  box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-glow-blue {
+  box-shadow: 0 20px 60px -15px rgba(0, 87, 184, 0.2);
+}
+
+.rounded-ultra {
+  border-radius: 40px;
+}
+
+.rounded-bento {
+  border-radius: 32px;
+}
+
+/* Fluid Typography System */
+h1 { font-size: clamp(1.5rem, 5vw, 3rem); font-weight: 800; line-height: 1; letter-spacing: -0.03em; }
+h2 { font-size: clamp(1.1rem, 2.5vw, 2.2rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; }
+h3 { font-size: clamp(0.95rem, 1.8vw, 1.35rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.01em; }
+h4 { font-size: 0.9rem; font-weight: 700; line-height: 1.3; letter-spacing: 0.01em; }
+
+p { @apply leading-relaxed; }
+
+.font-script {
+  font-family: var(--font-script);
+  line-height: normal;
+}
+
+/* Senior UI Utilities */
+.glass {
+  @apply backdrop-blur-xl bg-white/70 border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+}
+
+.glass-dark {
+  @apply backdrop-blur-xl bg-gray-900/80 border border-white/10 shadow-2xl;
+}
+
+.mesh-gradient {
+  background: radial-gradient(at 0% 0%, rgba(0, 87, 184, 0.05) 0px, transparent 50%),
+              radial-gradient(at 100% 0%, rgba(241, 90, 36, 0.05) 0px, transparent 50%);
+}
+
+/* Premium Shadows & Lift */
+.shadow-premium {
+  box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-glow-blue {
+  box-shadow: 0 20px 60px -15px rgba(0, 87, 184, 0.15);
+}
+
+.hover-lift {
+  @apply transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)];
+}
+.hover-lift:hover {
+  @apply -translate-y-2;
+}
+
+/* Layout Utilities */
+.rounded-ultra {
+  border-radius: clamp(1.5rem, 4vw, 3rem);
+}
+
+.rounded-bento {
+  border-radius: 2rem;
+}
+
+.section-padding {
+  @apply py-6 md:py-8 lg:py-10;
+}
+
+.container-tight {
+  @apply max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-12;
+}
+
+/* Gradients */
+.bg-brand-gradient {
+  background: linear-gradient(135deg, var(--color-brand-blue) 0%, #003e82 100%);
+}
+
+.bg-orange-gradient {
+  background: linear-gradient(135deg, var(--color-brand-orange) 0%, #d14414 100%);
+}
+
+/* Patterns */
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(0, 87, 184, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-mesh-deep {
+  background: radial-gradient(circle at 0% 0%, rgba(0, 87, 184, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 100% 100%, rgba(241, 90, 36, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, rgba(0, 166, 81, 0.03) 0%, transparent 50%);
+}
+
+/* Form Inputs Focus States */
+input, textarea {
+  @apply transition-all duration-300;
+}
+input:focus, textarea:focus {
+  @apply ring-2 ring-brand-blue/20 border-brand-blue outline-none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-blue/20 rounded-full hover:bg-brand-blue/40 transition-colors;
+}
+
+/* Accessibility: Better contrast for small gray text */
+.text-gray-500 { @apply text-gray-600; }
+.text-gray-400 { @apply text-gray-500; }
+
