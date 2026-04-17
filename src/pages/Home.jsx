@@ -363,7 +363,7 @@ const Home = () => {
                 <h3 className="text-2xl font-black uppercase tracking-tight">Our Mission</h3>
               </div>
               <p className="text-lg text-gray-600 font-semibold leading-relaxed">
-                To protect and empower legitimate MLM professionals across India by providing advocacy, support, and resources.
+                To protect and empower legitimate network marketing professionals across India by providing advocacy, support, and resources.
                 <br /><br />
                 We fight against fraudulent schemes while promoting ethical business practices, industry awareness, and constructive government regulation.
               </p>
@@ -376,9 +376,9 @@ const Home = () => {
                 <h3 className="text-2xl font-black uppercase tracking-tight">Our Vision</h3>
               </div>
               <p className="text-lg text-gray-600 font-semibold leading-relaxed">
-                To establish a respected, regulated MLM industry in India where genuine networkers can thrive with dignity, recognition, and government support.
+                To establish a respected, regulated network marketing industry in India where genuine networkers can thrive with dignity, recognition, and government support.
                 <br /><br />
-                We envision a future with a dedicated ministry for MLM and complete elimination of fraudulent schemes.
+                We envision a future with a dedicated ministry for network marketing and complete elimination of fraudulent schemes.
               </p>
             </div>
           </div>
