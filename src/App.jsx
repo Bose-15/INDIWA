@@ -1,6 +1,5 @@
 import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Layout from './components/layout/Layout';
 
@@ -29,42 +28,27 @@ const PageLoader = () => (
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         className="absolute -inset-20 bg-brand-blue/5 rounded-full blur-[100px]"
       />
-
-      {/* The Universal Globe Container */}
-      <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="relative z-10 p-6 bg-white rounded-full shadow-glow-blue border border-brand-blue/5"
-      >
-        <motion.div
-          animate={{ rotateY: 360 }}
-          transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
-          style={{ transformStyle: "preserve-3d" }}
-        >
-          <Globe size={72} className="text-brand-blue" strokeWidth={1.5} />
-        </motion.div>
-
-        {/* Orbital Ring Accent */}
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-0 border-r-2 border-brand-orange/30 rounded-full"
-        />
-      </motion.div>
     </div>
 
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.4, duration: 0.8 }}
-      className="mt-16 text-center space-y-4"
+      className="mt-8 text-center space-y-4 px-6"
     >
-      <div className="font-script text-brand-blue text-4xl mb-1">Indiwa</div>
+      <div className="space-y-2">
+        <h1 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tighter uppercase leading-none">
+          INDIWA
+        </h1>
+        <div className="h-1 w-12 bg-brand-green mx-auto rounded-full" />
+      </div>
+
       <div className="flex items-center gap-4 justify-center">
-        <div className="h-[1px] w-8 bg-brand-orange/20" />
-        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-gray-400">Universal Network</span>
-        <div className="h-[1px] w-8 bg-brand-orange/20" />
+        <div className="h-[1px] w-6 bg-brand-blue/20" />
+        <span className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400">
+          The National Movement
+        </span>
+        <div className="h-[1px] w-6 bg-brand-blue/20" />
       </div>
     </motion.div>
   </div>

@@ -2,9 +2,9 @@
 
 @theme {
   --color-brand-blue: #007cc1;
-  --color-brand-red: #cc0000;
+  --color-brand-red: #e11d48;
   --color-brand-green: #04b504;
-  --color-brand-orange: #F15A24;
+  --color-brand-orange: var(--color-brand-green);
   --color-brand-dark: #231F20;
   --font-sans: "Inter", system-ui, sans-serif;
   --font-heading: "Plus Jakarta Sans", system-ui, sans-serif;
@@ -106,8 +106,8 @@ p { @apply leading-relaxed; }
 }
 
 .mesh-gradient {
-  background: radial-gradient(at 0% 0%, rgba(0, 87, 184, 0.05) 0px, transparent 50%),
-              radial-gradient(at 100% 0%, rgba(241, 90, 36, 0.05) 0px, transparent 50%);
+  background: radial-gradient(at 0% 0%, rgba(0, 124, 193, 0.05) 0px, transparent 50%),
+              radial-gradient(at 100% 0%, rgba(4, 181, 4, 0.05) 0px, transparent 50%);
 }
 
 /* Premium Shadows & Lift */
@@ -117,6 +117,10 @@ p { @apply leading-relaxed; }
 
 .shadow-glow-blue {
   box-shadow: 0 20px 60px -15px rgba(0, 87, 184, 0.15);
+}
+
+.shadow-glow-green {
+  box-shadow: 0 20px 60px -15px rgba(4, 181, 4, 0.15);
 }
 
 .hover-lift {
@@ -145,11 +149,11 @@ p { @apply leading-relaxed; }
 
 /* Gradients */
 .bg-brand-gradient {
-  background: linear-gradient(135deg, var(--color-brand-blue) 0%, #003e82 100%);
+  background: linear-gradient(135deg, var(--color-brand-blue) 0%, #005a8c 100%);
 }
 
 .bg-orange-gradient {
-  background: linear-gradient(135deg, var(--color-brand-orange) 0%, #d14414 100%);
+  background: linear-gradient(135deg, var(--color-brand-green) 0%, #038c03 100%);
 }
 
 /* Patterns */
@@ -159,9 +163,9 @@ p { @apply leading-relaxed; }
 }
 
 .bg-mesh-deep {
-  background: radial-gradient(circle at 0% 0%, rgba(0, 87, 184, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 100% 100%, rgba(241, 90, 36, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 50% 50%, rgba(0, 166, 81, 0.03) 0%, transparent 50%);
+  background: radial-gradient(circle at 0% 0%, rgba(0, 124, 193, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 100% 100%, rgba(4, 181, 4, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, rgba(4, 181, 4, 0.03) 0%, transparent 50%);
 }
 
 /* Form Inputs Focus States */

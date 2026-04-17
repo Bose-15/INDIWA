@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="space-y-8">
             <Link to="/" className="flex items-center gap-3 group">
               <div className="relative">
-                <img src="/logo.png" alt="INDIWA Logo" className="h-12 w-auto group-hover:scale-110 transition-transform duration-500" />
+                <img src="/logo.png" alt="INDIWA Logo" className="h-20 w-auto group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-white/5 rounded-full blur-md -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
             </Link>
@@ -32,7 +32,7 @@ const Footer = () => {
                   whileHover={{ y: -5, scale: 1.1 }}
                   whileActive={{ scale: 0.95 }}
                   href="#" 
-                  className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-orange hover:bg-orange-500/10 transition-all shadow-sm"
+                  className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-brand-green hover:bg-green-500/10 transition-all shadow-sm"
                 >
                   <Icon size={18} />
                 </motion.a>
@@ -46,10 +46,10 @@ const Footer = () => {
                <span className="w-10 h-[1px] bg-brand-orange/40" /> Strategic Areas
             </h3>
             <ul className="space-y-5 font-bold text-xs uppercase tracking-widest">
-              <li><Link to="/about" className="hover:text-white transition-colors flex items-center gap-3 group"><ArrowRight size={12} className="text-brand-orange group-hover:translate-x-1 transition-transform" /> Legal Advocacy</Link></li>
-              <li><Link to="/about" className="hover:text-white transition-colors flex items-center gap-3 group"><ArrowRight size={12} className="text-brand-orange group-hover:translate-x-1 transition-transform" /> Fraud Recovery</Link></li>
-              <li><Link to="/gallery" className="hover:text-white transition-colors flex items-center gap-3 group"><ArrowRight size={12} className="text-brand-orange group-hover:translate-x-1 transition-transform" /> Case Study Library</Link></li>
-              <li><Link to="/about" className="hover:text-white transition-colors flex items-center gap-3 group"><ArrowRight size={12} className="text-brand-orange group-hover:translate-x-1 transition-transform" /> Skill Development</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors flex items-center gap-3 group"><ArrowRight size={12} className="text-brand-green group-hover:translate-x-1 transition-transform" /> Legal Advocacy</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors flex items-center gap-3 group"><ArrowRight size={12} className="text-brand-green group-hover:translate-x-1 transition-transform" /> Fraud Recovery</Link></li>
+              <li><Link to="/gallery" className="hover:text-white transition-colors flex items-center gap-3 group"><ArrowRight size={12} className="text-brand-green group-hover:translate-x-1 transition-transform" /> Case Study Library</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors flex items-center gap-3 group"><ArrowRight size={12} className="text-brand-green group-hover:translate-x-1 transition-transform" /> Skill Development</Link></li>
             </ul>
           </div>
 
@@ -89,12 +89,12 @@ const Footer = () => {
                <div className="h-[1px] w-full bg-gradient-to-r from-white/5 via-white/10 to-white/5" />
                
                <div className="flex items-start gap-4 relative z-10 font-sans">
-                  <div className="w-12 h-12 rounded-2xl bg-brand-orange/10 flex items-center justify-center text-brand-orange group-hover:scale-110 transition-transform shadow-inner">
+                  <div className="w-12 h-12 rounded-2xl bg-brand-green/10 flex items-center justify-center text-brand-green group-hover:scale-110 transition-transform shadow-inner">
                      <Mail size={20} />
                   </div>
                   <div>
                     <p className="text-[10px] font-extrabold uppercase text-gray-500 tracking-wider mb-1.5">Official Inquiries</p>
-                    <p className="text-base font-black text-white group-hover:text-brand-orange transition-colors">support@indiwa.org</p>
+                    <p className="text-base font-black text-white group-hover:text-brand-green transition-colors">support@indiwa.org</p>
                   </div>
                </div>
             </div>
@@ -114,7 +114,7 @@ const Footer = () => {
                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest opacity-80">Join 4,000,000+ Verified Networkers Nationwide.</p>
               </div>
            </div>
-           <Link to="/contact" className="relative z-10 bg-white text-brand-blue px-12 py-5 rounded-full font-black text-[11px] uppercase tracking-[0.2em] shadow-xl hover:bg-brand-orange hover:text-white hover:scale-105 active:scale-95 transition-all whitespace-nowrap">
+           <Link to="/contact" className="relative z-10 bg-white text-brand-blue px-12 py-5 rounded-full font-black text-[11px] uppercase tracking-[0.2em] shadow-xl hover:bg-brand-green hover:text-white hover:scale-105 active:scale-95 transition-all whitespace-nowrap">
               Get Started for Free
            </Link>
         </div>

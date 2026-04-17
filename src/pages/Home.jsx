@@ -77,7 +77,7 @@ const SectionHeader = ({ script, title, description, dark = false }) => (
     viewport={{ once: true, margin: "-100px" }}
     className="space-y-4 max-w-4xl mx-auto text-center mb-10 px-4 gpu-accelerated"
   >
-    <span className="font-script text-brand-orange text-3xl md:text-4xl block transform -rotate-1">{script}</span>
+    <span className="font-script text-brand-red text-3xl md:text-4xl block transform -rotate-1">{script}</span>
     <h2 className={`uppercase tracking-tighter leading-[1.05] ${dark ? 'text-white' : 'text-gray-900'}`}>{title}</h2>
     <div className="w-16 h-1 bg-brand-blue mx-auto rounded-full mt-6"></div>
     {description && (
@@ -237,7 +237,7 @@ const Home = () => {
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="font-script text-brand-orange text-3xl md:text-5xl block transform -rotate-1"
+                className="font-script text-brand-red text-3xl md:text-5xl block transform -rotate-1"
               >
                 Uniting India for a Stronger Tomorrow.
               </motion.span>
@@ -281,14 +281,14 @@ const Home = () => {
               className="relative z-10 w-full h-auto min-h-[50vh] lg:min-h-[65vh] object-cover rounded-ultra shadow-premium border-8 border-white group-hover:scale-[1.02] transition-transform duration-1000"
             />
             {/* Overlay Badges */}
-            <div className="absolute -top-10 right-0 lg:-right-10 glass p-6 md:p-8 rounded-ultra shadow-2xl z-20 animate-float max-w-[200px] md:max-w-[240px]">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-orange-gradient text-white rounded-2xl flex items-center justify-center shadow-glow">
-                  <ShieldCheck size={28} />
+            <div className="absolute top-2 right-2 md:-top-10 md:-right-10 glass p-3 md:p-8 rounded-2xl md:rounded-ultra shadow-2xl z-20 animate-float max-w-[140px] md:max-w-[240px]">
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="w-8 h-8 md:w-12 md:h-12 bg-orange-gradient text-white rounded-lg md:rounded-2xl flex items-center justify-center shadow-glow">
+                  <ShieldCheck className="w-5 h-5 md:w-7 md:h-7" />
                 </div>
                 <div>
-                  <p className="text-[9px] font-black text-gray-500 uppercase tracking-widest mb-1">India's Largest</p>
-                  <p className="text-sm font-black text-gray-900 uppercase">Networkers Welfare Association</p>
+                  <p className="text-[7px] md:text-[9px] font-black text-gray-500 uppercase tracking-widest mb-1">India's Largest</p>
+                  <p className="text-[10px] md:text-sm font-black text-gray-900 uppercase">Networkers Welfare Association</p>
                 </div>
               </div>
             </div>
@@ -307,7 +307,7 @@ const Home = () => {
               </div>
 
               <div className="absolute -bottom-6 -right-2 md:-bottom-10 md:-right-4 bg-brand-gradient text-white p-8 md:p-10 rounded-ultra shadow-glow-blue max-w-[220px] md:max-w-[260px] z-30">
-                <HeartHandshake size={32} className="mb-4 text-orange-400" />
+                <HeartHandshake size={32} className="mb-4 text-brand-green" />
                 <h3 className="text-lg md:text-xl font-black leading-tight uppercase tracking-tight">Authenticity <br />Trust <br />Unity</h3>
               </div>
             </div>
@@ -315,7 +315,7 @@ const Home = () => {
             {/* Content Context */}
             <div className="space-y-10 px-4 md:px-0">
               <div className="space-y-6">
-                <span className="font-script text-brand-orange text-3xl md:text-4xl block transform -rotate-1">Who We Are</span>
+                <span className="font-script text-brand-red text-3xl md:text-4xl block transform -rotate-1">Who We Are</span>
                 <h2 className="uppercase tracking-tight text-gray-900 leading-[1.2]">
                   Building Trust, Protection & <br />
                   <span className="text-brand-blue">Growth for India’s Networkers</span>
@@ -363,7 +363,7 @@ const Home = () => {
                 <h3 className="text-2xl font-black uppercase tracking-tight">Our Mission</h3>
               </div>
               <p className="text-lg text-gray-600 font-semibold leading-relaxed">
-                To protect and empower legitimate MLM professionals across India by providing advocacy, support, and resources.
+                To protect and empower legitimate network marketing professionals across India by providing advocacy, support, and resources.
                 <br /><br />
                 We fight against fraudulent schemes while promoting ethical business practices, industry awareness, and constructive government regulation.
               </p>
@@ -376,9 +376,9 @@ const Home = () => {
                 <h3 className="text-2xl font-black uppercase tracking-tight">Our Vision</h3>
               </div>
               <p className="text-lg text-gray-600 font-semibold leading-relaxed">
-                To establish a respected, regulated MLM industry in India where genuine networkers can thrive with dignity, recognition, and government support.
+                To establish a respected, regulated network marketing industry in India where genuine networkers can thrive with dignity, recognition, and government support.
                 <br /><br />
-                We envision a future with a dedicated ministry for MLM and complete elimination of fraudulent schemes.
+                We envision a future with a dedicated ministry for network marketing and complete elimination of fraudulent schemes.
               </p>
             </div>
           </div>
@@ -514,7 +514,7 @@ const Home = () => {
           <div className="bg-brand-gradient p-8 md:p-12 lg:p-24 relative overflow-hidden shadow-glow-blue group">
             <div className="absolute inset-0 bg-mesh-deep opacity-30 pulsate" />
             <div className="relative z-10 text-center max-w-4xl mx-auto space-y-12">
-              <h2 className="text-white uppercase leading-[1.05] tracking-tighter">Be The Change You Seek <br /><span className="text-orange-400">Join INDIWA Worldwide.</span></h2>
+              <h2 className="text-white uppercase leading-[1.05] tracking-tighter">Be The Change You Seek <br /><span className="text-brand-green">Join INDIWA Worldwide.</span></h2>
               <p className="text-xl md:text-2xl text-blue-100 font-semibold max-w-2xl mx-auto leading-relaxed opacity-90">
                 Together, we are transforming victims into victors and shadow schemes into standardized professional opportunities.
               </p>
@@ -534,7 +534,7 @@ const Home = () => {
           <div className="bg-white rounded-ultra p-8 md:p-12 lg:p-24 border border-gray-100 flex flex-col lg:flex-row items-center justify-between gap-16 shadow-premium">
             <div className="space-y-10 max-w-xl text-center lg:text-left">
               <div className="space-y-6">
-                <span className="font-script text-brand-orange text-3xl md:text-4xl block transform -rotate-1">Get In Touch</span>
+                <span className="font-script text-brand-red text-3xl md:text-4xl block transform -rotate-1">Get In Touch</span>
                 <h2 className="text-gray-900 uppercase tracking-tighter leading-none">Get in Touch with INDIWA</h2>
               </div>
               <p className="text-lg md:text-xl text-gray-600 font-semibold leading-relaxed">

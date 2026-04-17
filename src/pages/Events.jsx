@@ -18,7 +18,7 @@ const SectionHeader = ({ script, title, description, dark = false }) => (
     viewport={{ once: true, margin: "-100px" }}
     className="space-y-4 max-w-4xl mx-auto text-center mb-16 px-4"
   >
-    <span className="font-script text-brand-orange text-2xl md:text-3xl block transform -rotate-2">{script}</span>
+    <span className="font-script text-brand-red text-2xl md:text-3xl block transform -rotate-2">{script}</span>
     <h2 className={`uppercase tracking-tighter leading-[1.1] ${dark ? 'text-white' : 'text-gray-900'}`}>{title}</h2>
     <div className="w-12 h-1.5 bg-brand-blue mx-auto rounded-full mt-4"></div>
     {description && (
@@ -43,7 +43,7 @@ const EventCard = ({ category, date, title, location, description, price, image,
     </div>
     <div className="p-8 space-y-6">
       <div className="flex justify-between items-start">
-        <div className={`px-4 py-1.5 rounded-full text-[9px] font-extrabold uppercase tracking-widest ${type === 'past' ? 'bg-gray-200 text-gray-500' : 'bg-orange-50 text-brand-orange border border-orange-100'}`}>
+        <div className={`px-4 py-1.5 rounded-full text-[9px] font-extrabold uppercase tracking-widest ${type === 'past' ? 'bg-gray-200 text-gray-500' : 'bg-green-50 text-brand-green border border-green-100'}`}>
           {category}
         </div>
         <div className="flex gap-2">
@@ -181,14 +181,14 @@ const Events = () => {
                     <div className="absolute bottom-0 p-10 lg:p-16 text-white w-full">
                         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
                             <div className="space-y-6 max-w-2xl">
-                                <span className="bg-orange-gradient px-6 py-2 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em] shadow-glow">Upcoming Major Event</span>
+                                <span className="bg-brand-green px-6 py-2 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em] shadow-glow">Upcoming Major Event</span>
                                 <h2 className="text-3xl md:text-5xl uppercase tracking-tighter text-white leading-tight">National Legal <br/>Advocacy Summit 2024</h2>
                                 <div className="flex flex-wrap gap-8 text-[11px] font-extrabold uppercase tracking-widest text-blue-100/60">
-                                    <span className="flex items-center gap-2"><MapPin size={16} className="text-brand-orange" /> New Delhi, India</span>
-                                    <span className="flex items-center gap-2"><Calendar size={16} className="text-brand-orange" /> Oct 28, 2024</span>
+                                    <span className="flex items-center gap-2"><MapPin size={16} className="text-brand-green" /> New Delhi, India</span>
+                                    <span className="flex items-center gap-2"><Calendar size={16} className="text-brand-green" /> Oct 28, 2024</span>
                                 </div>
                             </div>
-                            <button className="bg-white text-brand-blue px-12 py-5 rounded-full font-extrabold text-xs uppercase tracking-[0.2em] shadow-2xl hover:bg-brand-orange hover:text-white transition-all transform active:scale-95">
+                            <button className="bg-white text-brand-blue px-12 py-5 rounded-full font-extrabold text-xs uppercase tracking-[0.2em] shadow-2xl hover:bg-brand-green hover:text-white transition-all transform active:scale-95">
                                 Register Seat Now
                             </button>
                         </div>
@@ -257,7 +257,7 @@ const Events = () => {
              <div className="absolute inset-0 bg-mesh-deep opacity-30" />
              <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
                 <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="space-y-8">
-                    <span className="font-script text-orange-400 text-4xl block">Never miss an Update</span>
+                    <span className="font-script text-brand-red text-4xl block">Never miss an Update</span>
                     <h2 className="text-4xl md:text-5xl uppercase tracking-tighter text-white leading-tight">Get Notified About <br/>Gatherings Near You</h2>
                     <p className="text-blue-100/70 max-w-2xl mx-auto font-medium leading-relaxed">
                         Join our digital announcement circle to receive direct WhatsApp and Email notifications 
@@ -270,7 +270,7 @@ const Events = () => {
                             placeholder="Your Email Address" 
                             className="flex-1 bg-white/10 border border-white/20 rounded-full px-8 py-5 text-sm font-medium focus:outline-none focus:ring-4 ring-white/10 transition-all placeholder:text-white/40"
                         />
-                        <button className="bg-white text-brand-blue px-10 py-5 rounded-full font-extrabold text-[11px] uppercase tracking-widest hover:bg-brand-orange hover:text-white transition-all shadow-xl">
+                        <button className="bg-white text-brand-blue px-10 py-5 rounded-full font-extrabold text-[11px] uppercase tracking-widest hover:bg-brand-green hover:text-white transition-all shadow-xl">
                             Subscribe
                         </button>
                     </div>

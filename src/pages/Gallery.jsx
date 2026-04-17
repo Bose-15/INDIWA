@@ -18,7 +18,7 @@ const SectionHeader = ({ script, title, description, dark = false }) => (
     viewport={{ once: true, margin: "-100px" }}
     className="space-y-4 max-w-4xl mx-auto text-center mb-16 px-4"
   >
-    <span className="font-script text-brand-orange text-2xl md:text-3xl block transform -rotate-2">{script}</span>
+    <span className="font-script text-brand-red text-2xl md:text-3xl block transform -rotate-2">{script}</span>
     <h2 className={`uppercase tracking-tighter leading-[1.1] ${dark ? 'text-white' : 'text-gray-900'}`}>{title}</h2>
     <div className="w-12 h-1.5 bg-brand-blue mx-auto rounded-full mt-4"></div>
     {description && (
@@ -97,7 +97,7 @@ const Gallery = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
                                 <motion.div initial={{ y: 20 }} animate={{ y: 0 }} className="space-y-4">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-8 h-8 rounded-lg bg-brand-orange text-white flex items-center justify-center">
+                                        <div className="w-8 h-8 rounded-lg bg-brand-green text-white flex items-center justify-center">
                                             <Maximize2 size={16} />
                                         </div>
                                         <span className="text-white text-[11px] font-extrabold uppercase tracking-widest">{img.cat}</span>
@@ -153,7 +153,7 @@ const Gallery = () => {
                         
                         <div className="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-slate-950/80 to-transparent flex justify-between items-end rounded-b-ultra">
                             <div className="space-y-4">
-                                <span className="bg-brand-orange px-6 py-2 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em] text-white">{selectedImage.cat}</span>
+                                <span className="bg-brand-green px-6 py-2 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em] text-white">{selectedImage.cat}</span>
                                 <h3 className="text-3xl md:text-5xl font-extrabold text-white uppercase tracking-tighter leading-none">{selectedImage.title}</h3>
                             </div>
                             <button className="hidden sm:flex items-center gap-4 bg-white/10 text-white px-8 py-4 rounded-full font-extrabold text-[10px] uppercase tracking-widest hover:bg-white/20 transition-colors">
@@ -181,11 +181,11 @@ const Gallery = () => {
                         <img src="/mass_awareness_rally.png" loading="lazy" className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-all duration-1000 grayscale group-hover:grayscale-0" />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="w-20 h-20 rounded-full glass border border-white/20 flex items-center justify-center text-white scale-90 group-hover:scale-110 transition-transform shadow-glow">
-                                <PlayCircle size={40} className="fill-brand-orange text-brand-orange opacity-90" />
+                                <PlayCircle size={40} className="fill-brand-green text-brand-green opacity-90" />
                             </div>
                         </div>
                         <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-slate-950/80 to-transparent text-left">
-                            <span className="text-[10px] font-extrabold text-brand-orange uppercase tracking-widest block mb-2">Exclusive Broadcast</span>
+                            <span className="text-[10px] font-extrabold text-brand-green uppercase tracking-widest block mb-2">Exclusive Broadcast</span>
                             <h4 className="text-xl font-extrabold text-white uppercase tracking-tight">Mass Awareness Documentary 2024</h4>
                         </div>
                     </div>
@@ -193,11 +193,11 @@ const Gallery = () => {
                         <img src="/news_studio.png" loading="lazy" className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-all duration-1000 grayscale group-hover:grayscale-0" />
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="w-20 h-20 rounded-full glass border border-white/20 flex items-center justify-center text-white scale-90 group-hover:scale-110 transition-transform shadow-glow">
-                                <PlayCircle size={40} className="fill-brand-orange text-brand-orange opacity-90" />
+                                <PlayCircle size={40} className="fill-brand-green text-brand-green opacity-90" />
                             </div>
                         </div>
                         <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-slate-950/80 to-transparent text-left">
-                            <span className="text-[10px] font-extrabold text-brand-orange uppercase tracking-widest block mb-2">Exclusive Broadcast</span>
+                            <span className="text-[10px] font-extrabold text-brand-green uppercase tracking-widest block mb-2">Exclusive Broadcast</span>
                             <h4 className="text-xl font-extrabold text-white uppercase tracking-tight">Legal Summit Highlights</h4>
                         </div>
                     </div>

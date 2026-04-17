@@ -18,8 +18,8 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Mission', path: '/mission' },
+    { name: 'Events', path: '/events' },
     // { name: 'Recent News', path: '/news' },
-    // { name: 'Events', path: '/events' },
   ];
 
   return (
@@ -64,7 +64,7 @@ const Navbar = () => {
                         transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                       />
                     ) : (
-                      <div className="absolute inset-x-5 bottom-2 h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
+                      <div className="absolute inset-x-5 bottom-2 h-0.5 bg-brand-green scale-x-0 group-hover:scale-x-100 transition-transform origin-left rounded-full" />
                     )}
                   </Link>
                 ))}
@@ -112,7 +112,7 @@ const Navbar = () => {
                 className="mt-3 lg:hidden glass rounded-[35px] p-6 shadow-2xl overflow-hidden pointer-events-auto border border-white/60 relative"
               >
                 {/* Decorative Blur in Menu */}
-                <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand-orange/10 blur-3xl rounded-full" />
+                <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand-green/10 blur-3xl rounded-full" />
 
                 <div className="relative z-10 space-y-4">
                   <div className="flex flex-col gap-1.5">

@@ -18,7 +18,7 @@ const SectionHeader = ({ script, title, description, dark = false }) => (
     viewport={{ once: true, margin: "-100px" }}
     className="space-y-4 max-w-4xl mx-auto text-center mb-16 px-4"
   >
-    <span className="font-script text-brand-orange text-2xl md:text-3xl block transform -rotate-2">{script}</span>
+    <span className="font-script text-brand-red text-2xl md:text-3xl block transform -rotate-2">{script}</span>
     <h2 className={`uppercase tracking-tighter leading-[1.1] ${dark ? 'text-white' : 'text-gray-900'}`}>{title}</h2>
     <div className="w-12 h-1.5 bg-brand-blue mx-auto rounded-full mt-4"></div>
     {description && (
@@ -62,7 +62,7 @@ const NewsCard = ({ category, date, title, description, image, index }) => (
       </p>
       
       <div className="pt-4 border-t border-gray-50 flex justify-between items-center group/btn">
-        <button className="text-[10px] font-extrabold text-brand-orange uppercase tracking-widest flex items-center gap-2">
+        <button className="text-[10px] font-extrabold text-brand-green uppercase tracking-widest flex items-center gap-2">
           Read Full Report <MoveRight size={14} className="transition-transform group-hover/btn:translate-x-2" />
         </button>
         <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover/btn:bg-blue-50 group-hover/btn:text-brand-blue transition-colors">
@@ -157,13 +157,13 @@ const News = () => {
                
                <div className="absolute bottom-0 p-10 lg:p-16 text-white w-full">
                   <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6 max-w-3xl">
-                     <span className="bg-brand-orange px-6 py-2 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em] shadow-glow">Latest Major Update</span>
+                     <span className="bg-brand-green px-6 py-2 rounded-full text-[10px] font-extrabold uppercase tracking-[0.2em] shadow-glow">Latest Major Update</span>
                      <h2 className="text-3xl md:text-5xl uppercase tracking-tighter leading-tight text-white">Nationwide Membership Drive: <br/>The INDIWA Evolution.</h2>
                      <p className="text-blue-100/80 font-medium text-lg hidden md:block leading-relaxed">
                         We are launching our national chapters to protect and empower legitimate networkers. 
                         Join the collective voice that is reshaping the status of the industry.
                      </p>
-                     <button className="flex items-center gap-4 text-[10px] font-extrabold uppercase tracking-[0.3em] hover:text-brand-orange transition-colors">
+                     <button className="flex items-center gap-4 text-[10px] font-extrabold uppercase tracking-[0.3em] hover:text-brand-green transition-colors">
                         Read Detailed Announcement <ArrowRight size={16} />
                      </button>
                   </motion.div>
@@ -220,7 +220,7 @@ const News = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <div className="space-y-10">
                     <div className="space-y-4">
-                        <span className="font-script text-brand-orange text-3xl block">Media Resources</span>
+                        <span className="font-script text-brand-red text-3xl block">Media Resources</span>
                         <h2 className="uppercase tracking-tighter text-gray-900 leading-none">Official Press Kit <br/>& Brand Assets.</h2>
                         <p className="text-gray-600 font-medium leading-relaxed">
                             Access approved media assets including high-resolution logos, executive portraits, 
@@ -240,7 +240,7 @@ const News = () => {
                         </div>
                         <div className="flex items-center justify-between p-6 bg-white rounded-2xl border border-gray-100 hover:border-brand-blue transition-all group">
                             <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-orange-50 text-brand-orange rounded-xl flex items-center justify-center">
+                                <div className="w-12 h-12 bg-green-50 text-brand-green rounded-xl flex items-center justify-center">
                                     <Briefcase size={20} />
                                 </div>
                                 <span className="font-extrabold text-[11px] uppercase tracking-widest text-gray-900">Official Press Release (PDF)</span>
@@ -255,7 +255,7 @@ const News = () => {
                    <div className="absolute inset-0 bg-brand-blue/10 pointer-events-none transition-opacity group-hover:opacity-0" />
                    <div className="absolute inset-0 flex items-center justify-center">
                       <div className="glass p-10 rounded-full text-white backdrop-blur-3xl group-hover:scale-110 transition-transform">
-                         <PlayCircle size={60} fill="currentColor" className="text-brand-orange opacity-90" />
+                         <PlayCircle size={60} fill="currentColor" className="text-brand-green opacity-90" />
                       </div>
                    </div>
                    <div className="absolute bottom-0 p-10 text-white bg-gradient-to-t from-slate-900/80 to-transparent w-full">
