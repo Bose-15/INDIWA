@@ -28,17 +28,23 @@ const allowedOrigins = [
   'http://localhost:4173',
 ].filter(Boolean);
 
-app.use(cors({
+const corsOptions = {
   origin: (origin, cb) => {
-    // Allow requests with no origin (mobile apps, curl, Postman)
+    // Allow requests with no origin (mobile apps, curl, Postman, Render health checks)
     if (!origin) return cb(null, true);
     if (allowedOrigins.includes(origin)) return cb(null, true);
+    console.warn(`[CORS] Rejected origin: ${origin}`);
     cb(new Error(`CORS: origin ${origin} not allowed`));
   },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+  optionsSuccessStatus: 200, // Some browsers (IE11) choke on 204
+};
+
+app.use(cors(corsOptions));
+// Respond to all preflight OPTIONS requests
+app.options('*', cors(corsOptions));
 
 // ─── Rate Limiting ────────────────────────────────────────────────────────────
 const globalLimiter = rateLimit({

@@ -1,7 +1,12 @@
 // ─── API Base Client ──────────────────────────────────────────────────────────
 // Central fetch wrapper that handles auth headers, token refresh, and errors.
+//
+// In dev:        VITE_API_URL is undefined → BASE_URL = '' → calls go through
+//                Vite's /api proxy (defined in vite.config.js) to localhost:5001
+// In production: VITE_API_URL = full Render URL set in Netlify env vars, e.g.
+//                https://indiwa-backend.onrender.com
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const BASE_URL = import.meta.env.VITE_API_URL ?? '';
 
 // In-memory access token (never in localStorage to avoid XSS)
 let _accessToken = null;
