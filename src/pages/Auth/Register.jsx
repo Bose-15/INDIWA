@@ -192,7 +192,7 @@ const Register = () => {
                 </motion.div>
               )}
 
-              <form className="space-y-5" onSubmit={handleSubmit}>
+              <form method="post" className="space-y-5" onSubmit={handleSubmit}>
 
                 {/* Row 1: Name + Email */}
                 <div className="grid grid-cols-2 gap-x-8">

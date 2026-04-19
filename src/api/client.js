@@ -1,10 +1,14 @@
 // ─── API Base Client ──────────────────────────────────────────────────────────
 // Central fetch wrapper that handles auth headers, token refresh, and errors.
 //
-// In dev:        VITE_API_URL is undefined → BASE_URL = '' → calls go through
-//                Vite's /api proxy (defined in vite.config.js) to localhost:5001
-// In production: VITE_API_URL = full Render URL set in Netlify env vars, e.g.
-//                https://indiwa-backend.onrender.com
+// BASE_URL is always '' (empty string = relative URLs).
+//
+// In dev:        Vite's proxy (vite.config.js) forwards /api/* → localhost:5001
+// In production: Netlify's [[redirects]] rule proxies /api/* → Render backend
+//                server-side, so there is NO CORS issue at all.
+//
+// If you need to point directly at a backend (bypassing the proxy), set
+// VITE_API_URL in your .env — e.g. for mobile/native testing.
 
 const BASE_URL = import.meta.env.VITE_API_URL ?? '';
 

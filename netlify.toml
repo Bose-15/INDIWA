@@ -5,7 +5,17 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# ── SPA routing — send all routes to index.html ───────────────────────────────
+# ── Proxy /api/* to the Render backend ────────────────────────────────────────
+# This avoids CORS entirely — Netlify forwards the request server-side.
+# Set RENDER_API_URL in Netlify dashboard → Site settings → Environment variables
+# e.g. https://indiwa-backend.onrender.com
+[[redirects]]
+  from   = "/api/*"
+  to     = ":RENDER_API_URL/api/:splat"
+  status = 200
+  force  = true
+
+# ── SPA routing — send all non-API routes to index.html ───────────────────────
 [[redirects]]
   from   = "/*"
   to     = "/index.html"
