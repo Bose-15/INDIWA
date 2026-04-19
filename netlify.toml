@@ -9,7 +9,7 @@
 # Netlify forwards these server-side — zero CORS issues.
 [[redirects]]
   from   = "/api/*"
-  to     = "https://indiwa-backend.onrender.com/api/:splat"
+  to     = "https://indiwa-1.onrender.com/api/:splat"
   status = 200
   force  = true
 
