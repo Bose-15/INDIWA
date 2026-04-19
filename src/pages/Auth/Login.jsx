@@ -129,7 +129,7 @@ const Login = () => {
                 </motion.div>
               )}
 
-              <form className="space-y-6" onSubmit={handleSubmit}>
+              <form method="post" className="space-y-6" onSubmit={handleSubmit}>
 
                 {/* Mobile */}
                 <div>

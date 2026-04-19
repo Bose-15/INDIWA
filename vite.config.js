@@ -12,7 +12,9 @@ export default defineConfig({
     host: true,
     proxy: {
       '/api': {
-        target: process.env.VITE_API_URL || 'http://localhost:5001',
+        // API_PROXY_TARGET is a plain Node env var (not exposed to browser).
+        // Falls back to local backend port 5001 for dev.
+        target: process.env.API_PROXY_TARGET || 'http://localhost:5001',
         changeOrigin: true,
       },
     },

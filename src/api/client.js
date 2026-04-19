@@ -1,7 +1,16 @@
 // ─── API Base Client ──────────────────────────────────────────────────────────
 // Central fetch wrapper that handles auth headers, token refresh, and errors.
+//
+// BASE_URL is always '' (empty string = relative URLs).
+//
+// In dev:        Vite's proxy (vite.config.js) forwards /api/* → localhost:5001
+// In production: Netlify's [[redirects]] rule proxies /api/* → Render backend
+//                server-side, so there is NO CORS issue at all.
+//
+// If you need to point directly at a backend (bypassing the proxy), set
+// VITE_API_URL in your .env — e.g. for mobile/native testing.
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const BASE_URL = import.meta.env.VITE_API_URL ?? '';
 
 // In-memory access token (never in localStorage to avoid XSS)
 let _accessToken = null;
