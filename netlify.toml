@@ -6,12 +6,10 @@
   NODE_VERSION = "20"
 
 # ── Proxy /api/* to the Render backend ────────────────────────────────────────
-# This avoids CORS entirely — Netlify forwards the request server-side.
-# Set RENDER_API_URL in Netlify dashboard → Site settings → Environment variables
-# e.g. https://indiwa-backend.onrender.com
+# Netlify forwards these server-side — zero CORS issues.
 [[redirects]]
   from   = "/api/*"
-  to     = ":RENDER_API_URL/api/:splat"
+  to     = "https://indiwa-backend.onrender.com/api/:splat"
   status = 200
   force  = true
 
