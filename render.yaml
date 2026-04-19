@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: indiwa-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    autoDeploy: true
+
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+      - key: PORT
+        value: 10000
+
+      # ── Set these in the Render dashboard → Environment tab ──────────────────
+      # DATABASE_URL  → use the Internal Database URL from your Render Postgres
+      # JWT_SECRET    → generate with: node -e "require('crypto').randomBytes(64).toString('hex')"
+      # FRONTEND_URL  → your Netlify URL e.g. https://indiwa.netlify.app
+      - key: DATABASE_URL
+        sync: false
+
+      - key: JWT_SECRET
+        sync: false
+
+      - key: FRONTEND_URL
+        sync: false
+
+      - key: BCRYPT_ROUNDS
+        value: "12"
+
+      - key: JWT_EXPIRES_IN
+        value: 7d
+
+      - key: JWT_REFRESH_EXPIRES_IN
+        value: 30d

@@ -6,6 +6,17 @@ import { fileURLToPath, URL } from 'node:url'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  server: {
+    port: parseInt(process.env.PORT) || 5173,
+    strictPort: false,
+    host: true,
+    proxy: {
+      '/api': {
+        target: process.env.VITE_API_URL || 'http://localhost:5001',
+        changeOrigin: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": fileURLToPath(new URL('./src', import.meta.url)),
